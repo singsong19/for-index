@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열과 for문</title>
+</head>
+<body>
+    <button onclick="menu()">분식집 : 메뉴를 보여라</button>
+    <div id ="list"></div>
+    <script>
+        var arr=["김밥", "라면", "순대", "오뎅", "떡볶이", "튀김", "볶음밥", "콜라/사이다"]
+        function menu(){
+            var result="";
+            for(var i = 0; i<arr.length; i++){
+                result += "<li>" + arr[i] + "<img src='./images/"+ arr[i]+".jpg'></li>";
+            }
+            // document.write(result);
+            document.getElementById("list").innerHTML = result;
+        }
+
+    </script>
+</body>
+</html>
